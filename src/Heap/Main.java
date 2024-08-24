@@ -1,0 +1,26 @@
+package Heap;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+
+public class Main {
+    public static void main(String[] args) {
+        MedianFinder medianFinder = new MedianFinder();
+        medianFinder.addNum(-1);
+        medianFinder.addNum(-2);
+        medianFinder.addNum(-3);
+        medianFinder.addNum(-4);
+        medianFinder.addNum(-5);
+        System.out.println(medianFinder.findMedian());
+//        List<Double> list1 = new ArrayList<>(Arrays.asList(null,null,155.00000,null,110.50000,null,114.00000,null,90.00000,null,66.00000,null,69.50000,null,73.00000,null,69.50000,null,73.00000,null,69.50000,null,73.00000,null,74.00000,null,73.00000,null,69.50000,null,66.00000,null,63.00000,null,66.00000,null,69.50000,null,66.00000,null,69.50000,null,66.00000,null,69.50000,null,66.00000,null,69.50000,null,73.00000,null,69.50000,null,73.00000,null,74.00000,null,75.00000,null,77.00000,null,79.00000,null,77.00000,null,79.00000,null,77.00000,null,79.00000,null,80.50000,null,79.00000,null,80.50000,null,79.00000,null,79.00000,null,79.00000,null,80.50000,null,82.00000,null,80.50000,null,79.00000,null,79.00000,null,79.00000,null,79.00000,null,79.00000,null,77.00000,null,75.00000,null,74.00000,null,73.00000,null,74.00000,null,75.00000,null,74.00000,null,75.00000,null,74.00000,null,75.00000,null,77.00000,null,75.00000,null,77.00000,null,79.00000,null,77.00000,null,75.00000,null,77.00000,null,79.00000,null,77.00000,null,79.00000,null,77.00000,null,75.00000,null,74.00000,null,75.00000,null,76.00000,null,77.00000,null,76.00000,null,75.00000,null,74.00000,null,73.00000,null,72.00000,null,71.00000,null,72.00000,null,73.00000,null,72.00000,null,71.00000,null,71.00000,null,71.00000,null,72.00000,null,71.00000,null,72.00000,null,71.00000,null,71.00000,null,71.00000,null,68.50000,null,66.00000,null,66.50000,null,66.00000,null,69.00000,null,67.00000,null,66.50000,null,66.00000,null,66.00000,null,66.00000,null,66.00000,null,66.00000,null,66.00000,null,66.00000,null,67.50000,null,69.00000,null,67.50000,null,69.00000,null,67.50000,null,69.00000,null,65.50000,null,66.00000,null,66.00000,null,66.00000,null,66.00000,null,66.00000,null,66.50000,null,67.00000,null,66.50000,null,66.00000,null,66.50000,null,67.00000,null,66.50000,null,67.00000,null,68.00000,null,67.00000,null,68.00000,null,67.00000,null,66.50000,null,66.00000,null,66.50000,null,67.00000,null,68.00000,null,69.00000,null,69.50000,null,69.00000,null,68.00000,null,67.00000,null,66.50000,null,66.00000,null,66.00000,null,66.00000,null,65.50000,null,65.00000,null,65.50000,null,66.00000,null,66.00000,null,66.00000,null,66.50000,null,67.00000,null,67.00000,null,67.00000,null,66.50000,null,67.00000,null,67.00000,null,67.00000,null,68.00000,null,67.00000));
+//        List<Double> list2 = new ArrayList<>(Arrays.asList(null,null,155.00000,null,110.50000,null,114.00000,null,90.00000,null,66.00000,null,69.50000,null,73.00000,null,69.50000,null,73.00000,null,69.50000,null,73.00000,null,74.00000,null,73.00000,null,69.50000,null,66.00000,null,63.00000,null,66.00000,null,69.50000,null,66.00000,null,69.50000,null,66.00000,null,69.50000,null,66.00000,null,69.50000,null,73.00000,null,69.50000,null,73.00000,null,74.00000,null,75.00000,null,77.00000,null,79.00000,null,77.00000,null,79.00000,null,77.00000,null,79.00000,null,80.50000,null,79.00000,null,80.50000,null,79.00000,null,79.00000,null,79.00000,null,80.50000,null,82.00000,null,80.50000,null,79.00000,null,79.00000,null,79.00000,null,79.00000,null,79.00000,null,77.00000,null,75.00000,null,74.00000,null,73.00000,null,74.00000,null,75.00000,null,74.00000,null,75.00000,null,74.00000,null,75.00000,null,77.00000,null,75.00000,null,77.00000,null,79.00000,null,77.00000,null,75.00000,null,77.00000,null,79.00000,null,77.00000,null,79.00000,null,77.00000,null,75.00000,null,74.00000,null,75.00000,null,76.00000,null,77.00000,null,76.00000,null,75.00000,null,74.00000,null,73.00000,null,72.00000,null,71.00000,null,72.00000,null,73.00000,null,72.00000,null,71.00000,null,71.00000,null,71.00000,null,72.00000,null,71.00000,null,72.00000,null,71.00000,null,71.00000,null,71.00000,null,70.00000,null,69.00000,null,68.00000,null,69.00000,null,70.00000,null,69.00000,null,68.00000,null,67.00000,null,66.50000,null,66.00000,null,66.50000,null,67.00000,null,66.50000,null,66.00000,null,66.00000,null,66.00000,null,66.00000,null,66.00000,null,66.00000,null,66.00000,null,65.50000,null,66.00000,null,66.00000,null,66.00000,null,66.00000,null,66.00000,null,66.50000,null,67.00000,null,66.50000,null,66.00000,null,66.50000,null,67.00000,null,66.50000,null,67.00000,null,68.00000,null,67.00000,null,68.00000,null,67.00000,null,66.50000,null,66.00000,null,66.50000,null,67.00000,null,68.00000,null,69.00000,null,69.50000,null,69.00000,null,68.00000,null,67.00000,null,66.50000,null,66.00000,null,66.00000,null,66.00000,null,65.50000,null,65.00000,null,65.50000,null,66.00000,null,66.00000,null,66.00000,null,66.50000,null,67.00000,null,67.00000,null,67.00000,null,66.50000,null,67.00000,null,67.00000,null,67.00000,null,68.00000,null,67.00000));
+//
+//        for(int i = 0; i < list1.size(); i++) {
+//            if (!Objects.equals(list1.get(i), list2.get(i))) {
+//                System.out.println(i);
+//            }
+//        }
+    }
+}
