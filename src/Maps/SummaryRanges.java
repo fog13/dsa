@@ -1,4 +1,4 @@
-package Map;
+package Maps;
 
 
 import java.util.Map;
